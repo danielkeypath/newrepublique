@@ -8,6 +8,9 @@
   display: flex;
   margin: 20px auto; }
 
+.carousel-indicators li {
+  background-color: #C43794; }
+
 .App-nav {
   min-width: 160px;
   display: block; }
@@ -42,7 +45,6 @@
   overflow: hidden;
   border-bottom: solid 1px;
   color: black;
-  font-weight: bold;
   transition: 0.6s;
   padding-left: 0.5rem;
   padding-bottom: 3px; }
