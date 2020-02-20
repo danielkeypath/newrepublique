@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Karla|Vidaloka&display=swap');
+
+$lightestgrey: #fafafa; //darkmaroon
+$lightgrey: #f3f3f3;
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  // max-width: 1400px;
+  margin: 0px auto;
+}
+
+.companyLogo{
+  display: flex;
+  margin: 20px auto;
+}
+
+.App-nav{
+  .navbar-toggler{float: right;}
+  .nav-item{
+    margin-bottom: 50px;
+  }
+  .nav-link{
+    position: absolute;
+    width: 80%;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: calc(12pt + 0.1vw);    
+    font-family: 'Karla', serif;
+    border-bottom: solid 1px;
+    padding-bottom: 3px;    
+  }
+  .nav-link:hover{
+    color: rgba(0,0,0,0.5) !important;
+  }
+
+  .nav-link span{
+    display: block;
+    position: absolute;
+    white-space: nowrap;
+    left: 0;
+    top: 8px;
+    width: 0;
+    overflow: hidden;
+    border-bottom: solid 1px;
+    color: black;
+    font-weight: bold;
+    transition: 0.6s;
+    padding-left: 0.5rem;
+    padding-bottom: 3px;
+
+    &.show{
+      width:100%;
+    }
+  }
+
+  .navbar-nav{
+    flex-direction: column !important;
+  }
+
+  min-width: 160px;
+  display: block;
+}
+
+.App-body {
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+
+  .carousel-item{
+    height: 100vh;
+    max-height: 674px;
+    // background-size: cover;
+    background-position-x: right;
+    background-repeat: no-repeat;    
+  }
+
+  .carousel-caption{
+    top: 25%;
+    position: absolute;
+    text-align: left;
+    left: 10%;
+    right: 50%;
+    z-index: 10;
+    color: black;
+    .icons{
+      margin-top:10%;
+    }
+    .icons li{
+      align-items: center;
+      text-align: center;
+      font-weight: bold;
+      max-width: 150px;
+      text-transform: uppercase;  
+    }
+  }
+
+  .carouselItemOne{
+    background-image: url('../images/HeroImage_BrandStrategy.jpg');    
+  }
+
+  .carouselItemTwo{
+    background-image: url('../images/HeroImage_OurServices.jpg');    
+  }
+
+  .sectionImg, .sectionDesc{
+    width: 50%;
+  }
+
+  .sectionDesc{
+    text-align: left;
+  }
+  
+  .sectionTitle{
+    font-family: 'Vidaloka', serif;
+    font-weight: bold;
+    color: black;    
+    font-size: calc(24pt + 0.5vw);
+  }
+
+  .sectionBodyText{
+    font-family: 'Karla', serif;
+    color: black;
+    font-size: calc(10pt + 0.1vw);  
+  }
+
+  .sectionLink{
+    color: #243443;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: solid 1px;
+    padding-bottom: 2px;
+    letter-spacing: 2px;
+  }
+
+  .sectionOne{
+    background-color: white;
+  }
+
+  .sectionTwo{
+    background-color: $lightestgrey;
+  }
+
+  .stayInTouch{
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .stayInTouch *{max-width: 400px;}
+  .sectionDesc, .stayInTouch{padding: 80px;}
+}
+
+.App-footer{
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+
+  li{cursor: pointer;}
+
+  .brandicon{
+    border: solid 0.5px white;
+    border-radius: 50% 50%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 5px;  
+    transition: ease-in 0.3s;
+  }
+
+  .brandicon:hover{
+    color: red;
+  }
+  
+}
+
+.no-list{
+  padding: 0px;
+
+  li{
+    padding:0px;
+    display:inline-block;
+  }
+}
+
+.floatleft{ float: left;}
+.floatright{ float: right;}
+
+
+//** ----- MEDIA ------ 
+@media (max-width: 1024px){
+  .carousel-item{
+    background-position-x: left !important;
+  }
+}
+@media (max-width: 992px){
+  .App{
+    display: block;  
+  }
+  .navbar-collapse{margin-top: 80px;}
+  .companyLogo{
+    position: absolute;
+    width: 8vw;
+    margin: 10px;
+    z-index: 100;
+  }
+  .carousel-caption{
+    top: 10% !important;
+    left: 10% !important;
+    right: 10% !important;
+    
+    .icons{
+      margin-top:5% !important;
+    }    
+  }
+  .sectionImg, .sectionDesc{
+    width: 100vw !important;
+  }  
+}
+
+@media(max-width:768px){
+  .sectionDesc{
+    padding: 50px !important;
+  }
+}
+
+@media (max-width: 640px){
+  .companyLogo{
+    width:12vw;
+  }  
+}
+
+@media (max-width: 360px){
+}
+
